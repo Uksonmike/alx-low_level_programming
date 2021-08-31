@@ -1,23 +1,32 @@
 #include "holberton.h"
 
 /**
- * print_last_digit - Last digit
- * @n: input number as an integer.
- * Return: last digit
+ * jack_bauer - Prints the minutes of a day
+ *
+ * Return: no return
  */
-int print_last_digit(int n)
+void jack_bauer(void)
 {
-	int nv;
+	int a, b, c, d;
 
-	if (n < 0)
+	for (a = '0'; a <= '2'; a++)
 	{
-		nv = -1 * (n % 10);
-		_putchar(nv + '0');
-		return (nv);
+		for (b = '0'; b <= '9'; b++)
+		{
+			for (c = '0'; c <= '5'; c++)
+			{
+				for (d = '0'; d <= '9'; d++)
+				{
+					if (a >= '2' && b >= '4')
+						break;
+					_putchar(a);
+					_putchar(b);
+					_putchar(':');
+					_putchar(c);
+					_putchar(d);
+					_putchar('\n');
+				}
+			}
+		}
 	}
-	else
-	{
-		nv = n % 10;
-		_putchar(nv + '0');
-		return (nv);
-	}
+}
